@@ -3,9 +3,9 @@
  
 # Components of the analysis
 ## Scripts
-R script to perform RNA-seq analysis (AnalysisDEfinal).
-R script to plot heat of DEG (plotfigure_paper).
-R script to perform coupling analysis (Coupling_analysis.R)
+* R script to perform RNA-seq analysis (AnalysisDEfinal).
+* R script to plot heat of DEG (plotfigure_paper).
+* R script to perform coupling analysis (Coupling_analysis.R)
 
 ## Datasets
 Datasets used for the analysis and obtained during the analysis
