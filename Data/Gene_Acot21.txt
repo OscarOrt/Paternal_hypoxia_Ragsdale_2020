@@ -1,0 +1,4 @@
+	chromosome	start	end	width	strand	feature	gene	exon	transcript	symbol
+1	20	28946709	28947340	631	-	protein_coding	gene_01	exon_01	trans_01	A
+2	20	28947457	28947659	202	-	protein_coding	gene_01	exon_02	trans_01	A
+3	20	28955783	28956303	520	-	protein_coding	gene_01	exon_03	trans_01	A
