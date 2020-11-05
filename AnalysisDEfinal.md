@@ -247,28 +247,7 @@ More visualisation
 
 Now that we have the DE genes, we will do a bit more visualisation
 
-``` r
-#visualization of the DE genes this is good too.
-rld <- rlog(dds, blind=F)###regularized logarithm or rlog normalisation which is suited for data visualisation ( unlike the one we used for actually used for testing) It incorporates a prior on the sample differences (Love, Huber, and Anders 2014). , data on the log2 scale which has been normalized with respect to library size or other normalization factors. Difference to the average expression of every differentially expressed gene. the counts are transformed using regularized logarithm (Love, Huber, and Anders 2014) .
-
-
-##Heatmap of significant genes
-
-mat<-assay(rld)[which(rownames(assay(rld))%in%rownames(DE_genes)),]
-mat <- mat - rowMeans(mat) 
-
-colnames(mat)<-c( "Control (s1)", "Control (s3)", "Control (s4)","Hypoxia (s6)",  "Hypoxia (s9)","Hypoxia (s10)")
-
-
-
-pheatmap(mat,show_rownames = T,cellwidth=20,cellheight=5,border_color="lightgrey",cluster_row=T,cluster_col=F,fontsize=6) # easy to visualize rownames 
-```
-
-![](AnalysisDEfinal_files/figure-markdown_github/unnamed-chunk-10-1.png)
-
-That is a heatmap of all the DE genes.
-
-We then do an MA plotand a volcano plot which show us logfold change across expression highlighting significant DE genes. That helps us to see what kind of power we have to detect DE genes.
+We do an MA plotand a volcano plot which show us logfold change across expression highlighting significant DE genes. That helps us to see what kind of power we have to detect DE genes.
 
 ``` r
 #MA plot
